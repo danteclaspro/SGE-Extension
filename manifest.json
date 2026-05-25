@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Extensão SGE",
+  "version": "1.7.1",
+  "description": "Acrescenta novas funcionalidades ao SGE, melhorando a emissão da escrituração e dando agilidade aos processos",
+  "permissions": [
+      "storage",
+      "scripting",
+      "activeTab",
+      "tabs"
+  ],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+          "matches": ["https://page/*"],
+          "js": [
+            "pdf-lib.min.js",
+            "pdf.min.js",
+            "pdf.worker.min.js",            
+            "common.js", 
+            "contentDadosEscola.js",                      
+            "content.js",            
+            "popup.js"                        
+          ]
+      }      
+  ],
+  "web_accessible_resources": [
+  {
+    "resources": [
+      "pdf/formFichaAvaliacaoAnual.pdf",
+      "pdf/formFichaAvaliacaoTrimestral.pdf",
+      "pdf/formRelatorioFaltas.pdf",
+      "pdf/formFichaAssinatura.pdf",
+      "pdf/formFichaTabelaSimples.pdf",
+      "pdf/Leia-me.pdf",
+      "pdf/novidades.pdf",
+      "contentChamadaData.js",
+      "contentDadosEscola.js",
+      "assets/*"
+    ],
+    "matches": ["https://page/*"]
+  }
+  ],
+  "host_permissions": [
+    "https://page/*"
+  ],
+  "icons": {
+    "128": "assets/icon.png"
+  }
+}

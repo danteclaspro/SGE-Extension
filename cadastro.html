@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Dados da Escola</title> 
+    <script src="contentDadosEscola.js"></script>    
+</head>
+<body>
+    <span id="cadastro" hidden></span>
+    <div id="topo">
+        <h1>Dados da Unidade</h1>
+    </div>
+    <p>Atenção: o armazenamento dos dados abaixo é feito de forma local, apenas para o preenchimento de formulários, e não afeta outros dispositivos na rede.</p>
+    <div class="table">
+        <div class="row mb-2">
+            <div class="col-12 custom-col">
+                <label for="escola">Escola</label>
+                <input type="text" id="escola" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-12 custom-col">
+                <label for="situacaoLegal">Situação legal</label>
+                <input type="text" id="legal" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-7 custom-col">
+                <label for="endereco">Endereço (Rua, Avn, Pça, Etc)</label>
+                <input type="text" id="endereco" class="form-control">
+            </div>
+            <div class="col-2 custom-col">
+                <label for="numero">Nº</label>
+                <input type="text" id="numero" class="form-control">
+            </div>
+            <div class="col-3 custom-col">
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-4 custom-col">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" class="form-control">
+            </div>
+            <div class="col-4 custom-col">
+                <label for="municipio">Município</label>
+                <input type="text" id="municipio" class="form-control">
+            </div>
+            <div class="col-1 custom-col">
+                <label for="uf">UF</label>
+                <input type="text" id="uf" class="form-control">
+            </div>
+            <div class="col-3 custom-col">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" class="form-control">
+            </div>                               
+        </div>       
+        <div class="row mb-2">
+            <div class="col-6 custom-col">
+                <label for="telefone">Telefones</label>
+                <input type="text" id="telefone" class="form-control">
+            </div>
+            <div class="col-6 custom-col">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="custom-col">
+                <button id="saveButton" class="btn btn-primary" value="teste">Salvar</button>
+            </div>
+            <div class="custom-col">
+                <button id="cancelButton" class="btn btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>       
+</body>
+</html>
